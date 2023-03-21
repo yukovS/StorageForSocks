@@ -1,0 +1,24 @@
+POST http://localhost:8080/api/socks/income
+Content-Type: application/json
+
+{
+  "color": "blue",
+  "cottonPart": 30,
+  "quantity": 440
+}
+
+###
+POST http://localhost:8080/api/socks/outcome
+Content-Type: application/json
+
+{
+  "color": "blue",
+  "cottonPart": 60,
+  "quantity": 100
+}
+
+###
+GET http://localhost:8080/api/socks?color=rd&operation=equal&cottonPart=191
+
+###
+GET http://localhost:8080/api/socks?color=&operation=equals&cottonPart=0
