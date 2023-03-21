@@ -32,8 +32,11 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(SocksNotFoundException.class)
     public ResponseEntity<String> socksNotFoundExceptionHandler(SocksNotFoundException e) {
+        System.out.println("hi");
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
                 .body("Socks not found");
+
+
     }
 
     @ExceptionHandler(WrongOperationException.class)
